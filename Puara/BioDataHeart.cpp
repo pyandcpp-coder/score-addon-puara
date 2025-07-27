@@ -4,8 +4,9 @@ namespace puara_gestures::objects
 {
 void BioData_Heart::operator()(halp::tick_musical t)
 {
-  heart.update(
-      inputs.heart_signal, 1e6 * t.position_in_frames / double(this->setup.rate));
+  // heart.update(
+  //     inputs.heart_signal, 1e6 * t.position_in_frames / double(this->setup.rate));
+  heart.update(inputs.heart_signal);
 
   outputs.heart_raw = heart.getRaw();
   outputs.heart_normalized = heart.getNormalized();
