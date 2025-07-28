@@ -54,7 +54,6 @@ target_sources(score_addon_puara
   3rdparty/extras/helpers.h
   3rdparty/extras/helpers.cpp
 )
-
 target_include_directories(score_addon_puara
   PRIVATE
   3rdparty/puara-gestures/include/
@@ -71,6 +70,25 @@ avnd_score_plugin_add(
   MAIN_CLASS GestureRecognizer
   NAMESPACE puara_gestures::objects
 )
+avnd_score_plugin_add(
+  BASE_TARGET score_addon_puara
+  SOURCES
+    Puara/PowerBandAvnd.hpp
+    Puara/PowerBandAvnd.cpp
+  TARGET puara_powerband
+  MAIN_CLASS PowerBandAvnd
+  NAMESPACE puara_gestures::objects
+)
+avnd_score_plugin_add(
+  BASE_TARGET score_addon_puara
+  SOURCES
+    Puara/CorrelationAvnd.hpp
+    Puara/CorrelationAvnd.cpp
+  TARGET puara_correlation_avnd
+  MAIN_CLASS CorrelationAvnd
+  NAMESPACE puara_gestures::objects
+)
+
 
 avnd_score_plugin_add(
   BASE_TARGET score_addon_puara
