@@ -101,6 +101,8 @@ avnd_score_plugin_add(
   NAMESPACE puara_gestures::objects
 )
 
+
+
 avnd_score_plugin_add(
   BASE_TARGET score_addon_puara
   SOURCES
@@ -193,6 +195,15 @@ avnd_score_plugin_add(
   NAMESPACE puara_gestures::objects
 )
 
+avnd_score_plugin_add(
+  BASE_TARGET score_addon_puara
+  SOURCES
+    Puara/PCAAvnd.hpp
+    Puara/PCAAvnd.cpp
+  TARGET pca_avnd
+  MAIN_CLASS PCAAvnd
+  NAMESPACE puara_gestures::objects
+)
 
 avnd_score_plugin_add(
   BASE_TARGET score_addon_puara
